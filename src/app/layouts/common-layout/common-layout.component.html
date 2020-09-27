@@ -1,0 +1,19 @@
+<div class="page">
+    <div class="page-header" [ngClass]="{'hideheader':!showheader}">
+      <app-header></app-header>
+    </div>
+    <div class="page-body">
+      <div class="page-nav">
+        <!-- <app-sidenav></app-sidenav> -->
+      </div>
+      <div class="page-content">
+        <router-outlet></router-outlet>
+      </div>
+      <p-toast position="top-right" key="toast"></p-toast>
+      <p-messages></p-messages>
+      <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle" width="425"></p-confirmDialog>
+      <app-loader></app-loader>
+    </div>
+  </div>
+  
+  

@@ -1,0 +1,23 @@
+<div class="login">
+
+    <div class="login-main p-grid p-dir-col p-justify-center">
+      <div class="login-main-child p-col p-justify-center p-col-align-start ">
+        <p class="h1">Task Management</p>
+        <span class="borderline"></span>
+        <div class="padding20"> Sign in </div>
+        <div>
+          <label for="username">Username</label>&nbsp;
+          <input id="username" type="text" placeholder="username" [(ngModel)]="credential.username">
+        </div>
+        <br/>
+        <div>
+          <label for="password">Password</label>&nbsp;
+          <input id="password" type="password" [(ngModel)]="credential.password">
+        </div>
+        <div>
+          <button type="button" class="btn" (click) = "loginApi()">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,23 @@
+<div >
+    <!-- <div class="header">
+        <button type="button" class="logout" (click) = "logout()">
+        </button>
+    </div> -->
+    <div class="grid">
+        <ng-container *ngFor="let task of tasks">
+            <div class="task">
+                <div class="task-detail">
+                    <label>Task Detail</label>&nbsp;
+                    {{task.detail}}
+                </div>
+                <div>
+                    <span> {{task.status}} </span>
+                    <span class="floatRight"> {{task.priority}} </span>
+                </div>
+                <div class="task-label" *ngIf="task.labels != null && task.labels.length > 0">
+                    {{task.labels}}
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

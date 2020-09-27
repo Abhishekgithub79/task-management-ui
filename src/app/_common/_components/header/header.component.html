@@ -1,0 +1,39 @@
+<div class="header">
+    <div class="toolbar no-margin">
+      <div class="toolbar-left">
+        <a (click)="onMenuClick()" class="menu-icon"><img src="" /></a>
+        <div class="logo-section">
+          <div class="prof-icon logo" >
+            <img src="{{appConstant.host}}/assets/images/logo.svg" />
+          </div>
+          <label>task management</label>
+        </div>
+      </div>
+      <div class="toolbar-right">
+        <div class="toolbar-item">
+          <div class="profile-section">
+            <label class="user_name">{{user.name}}</label>
+            <div class="profmenu">
+              <a class="prof-icon" (click)="profileAction()">
+                <img src="{{appConstant.host}}/assets/images/profile.svg"/>
+              </a>
+  
+              <div class="profilemenu"  [ngClass]="{'show':profmenu }">
+                <h3 class="headertext">Account Details</h3>
+                <div class="profilemenu-section">
+                  <div class="content"><span class="maintext">{{user.name}}</span></div>
+                  <div class="content"><span class="subtext">{{user.email}}</span></div>
+                </div>
+                <div class="profilemenu-section">
+                  <div class="content"><label>Permissions</label><span>{{getAllRoles()}}</span></div>
+                </div>
+                <div class="headertext logout">
+                  <a (click)="logout()"> Logout </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

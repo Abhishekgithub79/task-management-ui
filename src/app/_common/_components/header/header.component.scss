@@ -1,0 +1,230 @@
+.header {
+  background: #005fb2;
+  color: #ffffff;
+  height: 60px;
+  //display: flex;
+  .menu-icon{
+    width: 22px;
+    height: 22px;
+    padding: 6px;
+    margin: 13px;
+    cursor: pointer;
+    img{
+      width: 100%;
+    }
+  }
+  .toolbar-left {
+    float: left;
+  }
+  .toolbar-right {
+    float: right;
+  }
+  .logo-section{
+    display: flex;
+    line-height: 60px;
+    label{
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+  .prof-icon {
+    width: 40px;
+    height: 40px;
+    // margin: 10px 15px;
+    text-align: center;
+    background: #121d2e;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    &.logo{
+      background: #fff !important;
+    }
+  }
+& .warehouse{
+  background-color: #2c804e;
+  box-sizing: border-box;
+  //margin-left: 50%;
+  margin: 6.5px 0;
+  max-width: 350px;
+  min-width: 150px;
+  align-self: center;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  & .warehouse-list{
+    color: black;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 #a8b7c7;
+    background-color: #ffffff;
+    left: 0;
+    right: 0;
+    top: 52px;
+    font-size: 12px;
+    z-index: 2;
+    color: #16325c;
+    min-width: 200px;
+    & ul {
+      list-style: none;
+      margin: 0;
+      padding:0;
+      max-height: 200px;
+      overflow: scroll;
+      & li {
+        padding: 10px 30px 10px 10px;
+        position: relative;
+        &.active {
+          background-color: #f4f6f9;
+        }
+        & .checkedicon{
+          position: absolute;
+          top: calc(50% - 8.5px);
+          right: 10px;
+          color: #000000;
+        }
+
+      }
+    }
+  }
+
+  & p {
+    margin:0;
+  }
+  & img{
+    position: absolute;
+    top: 50%;
+    right: 14px;
+  }
+  & .heading{
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #d8dde6;
+  }
+  & .content{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    padding-right: 15px;
+    //max-width: 96%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+  .prof-icon img {
+    width: 20px;
+    vertical-align:  super;
+  }
+  .profile-section{
+    margin-left: auto;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 20px;
+    line-height: 60px;
+    .prof-icon img {
+      width: 20px;
+    }
+    .user_name{
+      text-transform: capitalize;
+    }
+    label{
+      font-size: 14px;
+    }
+    .profmenu {
+      display: flex;
+      position: relative;
+      & .profilemenu.show{
+        opacity:1;
+        visibility: visible;
+      }
+      & .profilemenu{
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        color: black;
+        width: 218px;
+        left: -140px;
+        top: 58px;
+        font-size: 12px;
+        line-height: 40px;
+        border-radius: 4px;
+        z-index: 2;    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+        background-color: #ffffff;
+        word-break: break-all;
+        transition: opacity 550ms ease-out;
+        opacity:0;
+
+        visibility: hidden;
+        &-section{
+          padding-left: 14px;
+          & .subtext{
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #16325c;
+          }
+          & .maintext{
+            font-size: 13px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            color: #16325c;
+          }
+          & .content{
+            line-height: 20px;
+            margin-top: 6px;
+          }
+          & label{
+            font-size: 10px;
+            font-weight: normal;
+            letter-spacing: normal;
+            color: #a8b7c7;
+            display: block;
+          }
+        }
+
+       & .headertext{
+         border-top: 1px solid #cccccc;
+         border-bottom: 1px solid #cccccc;
+         background-color: #f5faff;
+         padding-left: 14px;
+         font-size: 12px;
+         font-weight: 600;
+         font-style: normal;
+         &.logout{
+           font-size: 13px;
+           font-weight: normal;
+           color: #16325c;
+           margin-top: 8px;
+           background: none;
+         }
+       }
+        &:before {
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 0;
+          display: block;
+          top: -19px;
+          border: 10px solid transparent;
+          border-bottom-color: #ffffff;
+          right: 18px;
+        }
+      }
+    }
+  }
+}

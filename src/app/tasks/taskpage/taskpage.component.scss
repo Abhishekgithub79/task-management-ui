@@ -1,0 +1,47 @@
+.grid {
+    background-color: grey;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.header {
+    padding-bottom: 100px;
+}
+
+.logout {
+    background-image: url("../../../assets/images/logout.png");
+    float: right;
+}
+
+.task {
+    border: 2px solid transparent;
+    background-color: #fff;
+    border-color: #e0e0e0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit  */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko         */
+    box-sizing: border-box; 
+    width: 200px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.task-detail {
+    padding-bottom: 25px;
+}
+
+.task-label {
+    border: 1px solid transparent;
+    background-color: #fff;
+    border-color: blue;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit  */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko         */
+    box-sizing: border-box;
+}
+
+.floatRight {
+    float: right;
+}

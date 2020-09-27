@@ -1,0 +1,31 @@
+<div class="header-action-buttons">
+  <ng-container *ngFor="let headerActionButton of headerActionButtons; let headerActionButtonIndex = index;">
+    <div class="toolbar-item" *ngIf="headerActionButtonIndex < 2">
+      <button type="button" (click)="headerActionButton.click()" class="btn {{headerActionButton.classes}}"
+              [ngClass]="{'btn-disabled' : headerActionButton.disabled()}" [disabled]="headerActionButton.disabled()">
+        {{headerActionButton.label}}
+      </button>
+    </div>
+  </ng-container>
+  <div class="toolbar-item" *ngIf="headerActionButtons.length == 3">
+    <button type="button" (click)="headerActionButtons[2].click()" class="btn {{headerActionButtons[2].classes}}"
+            [ngClass]="{'btn-disabled' : headerActionButtons[2].disabled()}" [disabled]="headerActionButtons[2].disabled()">
+      {{headerActionButtons[2].label}}
+    </button>
+  </div>
+  <div class="toolbar-item position-relative" *ngIf="headerActionButtons.length > 3">
+    <!-- <button type="button" [(peClickOutside)]="showMoreHeaderActionButtons" class="btn btn-secondary btn-more">
+      <span>More</span>
+      <img src=""/>
+    </button> -->
+    <div class="btn-more-content" *ngIf="showMoreHeaderActionButtons">
+      <ng-container *ngFor="let headerActionButton of headerActionButtons; let headerActionButtonIndex = index;">
+        <div class="btn-more-item" *ngIf="headerActionButtonIndex > 2"
+             [ngClass]="{'btn-disabled' : headerActionButton.disabled()}"
+             (click)="!headerActionButton.disabled() && headerActionButton.click();">
+          {{headerActionButton.label}}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
